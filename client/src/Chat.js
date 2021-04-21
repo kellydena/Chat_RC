@@ -17,7 +17,7 @@ const Chat = () => {
     const [message, updateMessage] = useState('')
     const [messages, updateMessages] = useState([])
     const ref = useRef();
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const handleNewMessage = newMessage =>
@@ -47,6 +47,7 @@ const Chat = () => {
         let emoji = String.fromCodePoint(...codesArray)
         updateMessage(message + emoji)
     }
+
     const handleSetEmojis = e =>{
       setIsOpen(!isOpen)
     }
@@ -74,28 +75,16 @@ const Chat = () => {
                     type="text"
                     value={message}
                 >
-            {/*     <button>
-
-                 
-                 <Picker set="apple"
-                style={{
-                    position: 'absolute',
-                    zIndex: 1000,
-                    bottom: '50px',
-                }}
-                onSelect={addEmoji}
-                autoFocus={isOpen} /> 
-                </button> */}
                 </TextField>
                 <IconButton onClick={handleSetEmojis}>
                   <SentimentSatisfiedOutlinedIcon fontSize='small' />
                   {isOpen ? 
                     <Picker set="apple"
-                    style={{
+                     style={{
                         position: 'absolute',
                         zIndex: 1000,
                         bottom: '50px',
-                    }}
+                    }} 
                     onSelect={addEmoji}
                     autoFocus={isOpen} /> 
                   : null}
