@@ -84,6 +84,7 @@ const Chat = () => {
                         position: 'absolute',
                         zIndex: 1000,
                         bottom: '50px',
+                        background:'black'
                     }} 
                     onSelect={addEmoji}
                     autoFocus={isOpen} /> 
