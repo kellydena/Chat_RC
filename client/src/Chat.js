@@ -53,48 +53,48 @@ const Chat = () => {
     }
 
     return (
-        <main className="container">
-            <ul className="list">
-                { messages.map((m, index) => (
-                    <li
-                        className={`list__item list__item--${m.id === myId ? 'mine' : 'other'}`}
-                        key={index}
-                    >
-                        <AccountCircleIcon fontSize='small' />
-                        <span className={`message message--${m.id === myId ? 'mine' : 'other'}`}>
-                            { m.message }
-                        </span>
-                    </li>
-                ))}
-            </ul>
-            <form className="form" onSubmit={handleFormSubmit} autoComplete={false}  >
-                <TextField
-                    className="formField"
-                    onChange={handleInputChange}
-                    placeholder="Digite uma mensagem"
-                    type="text"
-                    value={message}
-                >
-                </TextField>
-                <IconButton onClick={handleSetEmojis}>
-                  <SentimentSatisfiedOutlinedIcon fontSize='small' />
-                  {isOpen ? 
-                    <Picker set="apple"
-                     style={{
-                        position: 'absolute',
-                        zIndex: 1000,
-                        bottom: '50px',
-                    }} 
-                    onSelect={addEmoji}
-                    autoFocus={isOpen} /> 
-                  : null}
-                </IconButton>
-                <Button  onClick={handleFormSubmit} > 
-                    <SendIcon fontSize='small' />
-                    Enviar
-                </Button>
-            </form>
-        </main>
+      <main className="container">
+        <ul className="list">
+          { messages.map((m, index) => (
+            <li
+              className={`list__item list__item--${m.id === myId ? 'mine' : 'other'}`}
+              key={index}
+            >
+              <AccountCircleIcon fontSize='small' />
+              <span className={`message message--${m.id === myId ? 'mine' : 'other'}`}>
+                  { m.message }
+              </span>
+            </li>
+          ))}
+        </ul>
+          <form className="form" onSubmit={handleFormSubmit} autoComplete={false}  >
+            <TextField
+              className="formField"
+              onChange={handleInputChange}
+              placeholder="Digite uma mensagem"
+              type="text"
+              value={message}
+            >
+              </TextField>
+              <IconButton onClick={handleSetEmojis}>
+                <SentimentSatisfiedOutlinedIcon fontSize='small' />
+                {isOpen ? 
+                  <Picker set="apple"
+                    style={{
+                      position: 'absolute',
+                      zIndex: 1000,
+                      bottom: '50px',
+                  }} 
+                  onSelect={addEmoji}
+                  autoFocus={isOpen} /> 
+                : null}
+              </IconButton>
+              <Button  onClick={handleFormSubmit} > 
+                  <SendIcon fontSize='small' />
+                  Enviar
+              </Button>
+          </form>
+      </main>
     )
 }
 
