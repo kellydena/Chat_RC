@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Admin from './Admin'
+import InitialPage from './InitialPage'
 
-ReactDOM.render(<Admin />, document.getElementById('root'))
+ReactDOM.render(<InitialPage />, document.getElementById('root'))

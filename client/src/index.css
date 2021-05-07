@@ -16,8 +16,11 @@ body {
 }
 
 .form {
-  background: #434758;
+  display: flex;
+  background: #f1f1f1;
   padding: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .formField {
@@ -57,13 +60,28 @@ body {
   padding: .5rem 1rem;
 }
 
-.message.message--mine {
+.message.green {
   background: #c3e88d;
   border-color: #82be27;
   text-align: right;
 }
 
-.message.message--other {
+.message.blue {
   background: #89ddff;
   border-color: #1abeff;
+}
+
+.message.yellow {
+  background: rgb(255, 255, 70);
+  border-color: rgb(248, 248, 72);
+}
+
+.message.red {
+  background: red;
+  border-color: rgb(252, 113, 113);
+}
+
+.message.other {
+  background: rgb(209, 209, 209);
+  border-color: rgb(228, 228, 228);
 }
