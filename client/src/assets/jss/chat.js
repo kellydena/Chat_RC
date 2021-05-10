@@ -1,4 +1,3 @@
-
 const chatStyle = {
   spanName:{
     display: 'flex', 

@@ -5,7 +5,10 @@ import uuid from 'uuid/v4'
 import 'emoji-mart/css/emoji-mart.css'
 import {Picker} from 'emoji-mart'
 
-import { Button, IconButton, makeStyles, TextField} from '@material-ui/core'
+import { Button, 
+  IconButton, 
+  makeStyles, 
+  TextField} from '@material-ui/core'
 import SendIcon from '@material-ui/icons/Send';
 import SentimentSatisfiedOutlinedIcon from '@material-ui/icons/SentimentSatisfiedOutlined';
 

@@ -1,11 +1,19 @@
-import { Button, Fade, Grid, IconButton, makeStyles, TextField, Typography } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
+
+import { Button, 
+  Fade, Grid, 
+  IconButton, 
+  makeStyles, 
+  TextField, 
+  Typography } from "@material-ui/core";
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import SmsIcon from '@material-ui/icons/Sms';
 
 import Chat from "./Chat";
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import style from './assets/jss/initialPage'
+
 import img from './assets/img/img.jpg'
-import SmsIcon from '@material-ui/icons/Sms';
+import style from './assets/jss/initialPage'
+
 const useStyles = makeStyles(style);
 
 export default function InitialPage (){
@@ -96,7 +104,4 @@ export default function InitialPage (){
       }
     </div>
   )
-
-
-
 }
