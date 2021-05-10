@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import io from 'socket.io-client'
 import uuid from 'uuid/v4'
 
@@ -26,7 +26,6 @@ const Chat = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const {name, color} = props
   const classes = useStyles()
-  const ref = useRef();
 
   useEffect(() => {
     const handleNewMessage = newMessage =>

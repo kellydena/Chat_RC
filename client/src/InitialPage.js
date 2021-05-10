@@ -46,7 +46,6 @@ export default function InitialPage (){
               id='container'
               container
               direction='column'
-              justify='space-between'
               justify='center'
             >
               <div
@@ -63,7 +62,7 @@ export default function InitialPage (){
                   <div>
                   <div className={classes.divColor} >
                   <span style={{color: 'black'}} >Escolha a cor que deseja enviar suas mensagens: </span>
-                    <IconButton onClick={() => handleSetColor('red')} className={color == 'red' ? classes.colorSelected : null}>
+                    <IconButton onClick={() => handleSetColor('red')} className={color === 'red' ? classes.colorSelected : null}>
                       <FiberManualRecordIcon className={classes.iconRed} />
                     </IconButton>
                     <IconButton onClick={() => handleSetColor('blue')} className={color === 'blue' ? classes.colorSelected : null} >
