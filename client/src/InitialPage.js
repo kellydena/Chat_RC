@@ -15,6 +15,8 @@ export default function InitialPage (){
 
   const classes = useStyles()
 
+ 
+
   const handleClose = () =>{
     setModalColorAndName(false)
   }
@@ -96,7 +98,4 @@ export default function InitialPage (){
       }
     </div>
   )
-
-
-
 }
