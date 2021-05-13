@@ -1,0 +1,16 @@
+#packages dependences
+node_modules/
+
+# Files build
+build/
+
+# visual studio 
+.vscode
+.vscode-test
+
+# Files logs
+logs
+*.log*
+
+#dotenv
+.env
