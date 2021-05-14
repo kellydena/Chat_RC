@@ -20,7 +20,33 @@ const myId = uuid()
 const socket = io('http://localhost:8080')
 socket.on('connect', () => console.log('[IO] Connect => A new connection has been established'))
 
+const colors = ["#fff","#FF2000","#4025DA","#1336EC","#DC23C5","#093114","#4C0403","#810349"];
+const chatColor = colors[Math.floor(Math.random() * colors.length)];
+//console.log(colors.length);
+
+ // const chatColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+
 const Chat = (props) => {
+
+/*
+  function randDarkColor() {
+    var lum = -0.25;
+    var hex = String('#' + Math.random().toString(16).slice(2, 8).toUpperCase()).replace(/[^0-9a-f]/gi, '');
+    if (hex.length < 6) {
+        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+    }
+    var rgb = "#",
+        c, i;
+    for (i = 0; i < 3; i++) {
+        c = parseInt(hex.substr(i * 2, 2), 16);
+        c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+        rgb += ("00" + c).substr(c.length);
+    }
+    return rgb;
+  }
+
+  const chatColor = randDarkColor();*/
+
   const [message, updateMessage] = useState('')
   const [messages, updateMessages] = useState([])
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +66,8 @@ const Chat = (props) => {
       socket.emit('chat.message', {
           id: myId,
           name: name,
-          message
+          message,
+          chatColor
       })
       updateMessage('')
     }
@@ -72,7 +99,7 @@ const Chat = (props) => {
             <span style={{fontSize: '15px'}} className={`message ${m.id === myId ? 'mine' : 'other'}`}>
               {m.id === myId ?
                 null
-              : <span className={classes.spanName} > {m.name}</span> }
+              : <span style={{color: m.chatColor}} className={classes.spanName} > {m.name}</span> }
                 {m.message}
             </span>
           </li>
