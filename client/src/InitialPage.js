@@ -63,7 +63,7 @@ export default function InitialPage (){
                   </div>
                   <Button 
                     variant='outlined'
-                    disabled={!(color && name)}
+                    disabled={!(name)}
                     onClick={handleClose}
                     className={classes.button}
                   >

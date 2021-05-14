@@ -24,7 +24,7 @@ const Chat = (props) => {
   const [message, updateMessage] = useState('')
   const [messages, updateMessages] = useState([])
   const [isOpen, setIsOpen] = useState(false);
-  const {name, color} = props
+  const {name} = props
   const classes = useStyles()
 
   useEffect(() => {
