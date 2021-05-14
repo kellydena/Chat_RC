@@ -22,7 +22,7 @@ socket.on('connect', () => console.log('[IO] Connect => A new connection has bee
 
 const colors = ["#fff","#FF2000","#4025DA","#1336EC","#DC23C5","#093114","#4C0403","#810349"];
 const chatColor = colors[Math.floor(Math.random() * colors.length)];
-console.log(colors.length);
+//console.log(colors.length);
 
  // const chatColor = "#" + Math.floor(Math.random()*16777215).toString(16);
 
