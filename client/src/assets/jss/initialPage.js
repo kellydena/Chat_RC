@@ -11,25 +11,6 @@ export const styleInitialPage = (theme) => ({
     alignItems: 'center',
     justifyContent : 'center'
   },
-  iconRed:{
-    color: 'red',
-  },
-  iconBlue:{
-    color: 'blue'
-  },
-  iconGreen:{
-    color: 'green'
-  },
-  iconYellow:{
-    color: 'yellow'
-  },
-  colorSelected:{
-    "&,&:focus,&:hover": {
-    padding: '0px',
-    background: 'black !important',
-    margin: '10px'
-    }
-  },
   wrapper: {
     height: "auto",
     minHeight: "100vh",

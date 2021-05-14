@@ -69,7 +69,7 @@ const Chat = (props) => {
             className={`list__item list__item--${m.id === myId ? 'mine' : 'other'}`}
             key={index}
           >
-            <span style={{fontSize: '15px'}} className={`message ${m.id === myId ? color : 'other'}`}>
+            <span style={{fontSize: '15px'}} className={`message ${m.id === myId ? 'mine' : 'other'}`}>
               {m.id === myId ?
                 null
               : <span className={classes.spanName} > {m.name}</span> }

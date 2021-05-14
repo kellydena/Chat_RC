@@ -2,11 +2,9 @@ import React, {useState } from "react";
 
 import { Button, 
   Fade, Grid, 
-  IconButton, 
   makeStyles, 
   TextField, 
   Typography } from "@material-ui/core";
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import SmsIcon from '@material-ui/icons/Sms';
 
 import Chat from "./Chat";
@@ -19,16 +17,11 @@ const useStyles = makeStyles(style);
 export default function InitialPage (){
   const [modalColorAndName, setModalColorAndName] = useState(true)
   const [name, setName] = useState(null)
-  const [color, setColor] = useState(null)
 
   const classes = useStyles()
 
   const handleClose = () =>{
     setModalColorAndName(false)
-  }
-
-  const handleSetColor = (color) =>{
-    setColor(color)
   }
 
   const handleSetName = (event) =>{
@@ -60,21 +53,6 @@ export default function InitialPage (){
                       Dados necessários para iniciar uma conversa:
                     </Typography>
                   <div>
-                  <div className={classes.divColor} >
-                  <span style={{color: 'black'}} >Escolha a cor que deseja enviar suas mensagens: </span>
-                    <IconButton onClick={() => handleSetColor('red')} className={color === 'red' ? classes.colorSelected : null}>
-                      <FiberManualRecordIcon className={classes.iconRed} />
-                    </IconButton>
-                    <IconButton onClick={() => handleSetColor('blue')} className={color === 'blue' ? classes.colorSelected : null} >
-                      <FiberManualRecordIcon className={classes.iconBlue} />
-                    </IconButton>
-                    <IconButton onClick={() => handleSetColor('green')} className={color === 'green' ? classes.colorSelected : null} >
-                      <FiberManualRecordIcon className={classes.iconGreen} />
-                    </IconButton>
-                    <IconButton onClick={() => handleSetColor('yellow')} className={color === 'yellow' ? classes.colorSelected : null} >
-                      <FiberManualRecordIcon className={classes.iconYellow} />
-                    </IconButton>
-                  </div>
                   <div>
                     <TextField 
                       onChange={(e) => handleSetName(e)} 
@@ -99,7 +77,7 @@ export default function InitialPage (){
           </div>
         </div>
       : 
-        <Chat name={name} color={color}/>
+        <Chat name={name} />
       }
     </div>
   )
